@@ -24,7 +24,10 @@ public:
 		int curr = k;
 
 		while (base[curr]!=curr) 	// пока элемент не указывает сам на себя
+		{
+			base[curr] = find(base[curr]);
 			curr = base[curr];		// переходим к его предку
+		}	
 
 		return curr;
 	}
