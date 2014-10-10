@@ -19,6 +19,21 @@ public:
 
 	~uncrossed_groups(){};
 
+	// операция поиска (пока просто)
+	int find(int const &k){
+		int curr = k;
+
+		while (base[curr]!=curr) 	// пока элемент не указывает сам на себя
+			curr = base[curr];		// переходим к его предку
+
+		return curr;
+	}
+
+	// операция слияния двух групп
+	void unite(int const &l, int const &r){
+		base[r] = l;
+	}
+
 };
 
 int main()
