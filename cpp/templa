@@ -1,0 +1,6 @@
+#include <cstddef> // size_t
+
+// реализуйте шаблонную функцию array_size,
+// которая возвращает значение типа size_t.
+
+// put your code here
